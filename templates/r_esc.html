@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="padding-left:6px;">Space Radiation Expert Service Centre (R-ESC)</h1>
+<div class="parent">
+
+    <div class="objectives">
+        <h3>Mission statement</h3>
+        <p>The mission of the Space Radiation ESC (R-ESC) is to provide and develop the functionalities, capabilities and expertise in the domain of Space Radiation that are needed within the ESA SWE network to achieve as a collaborative enterprise its mission of demonstrating and assessing the influences of Space Weather and informing and supporting end users through the provision of accurate, reliable and timely products and (pre-) operational services, tailored to their requirements. The Space Radiation ESC ensures that the monitoring, modelling and forecasting of space particle radiation (ambient plasma, solar energetic particles, radiation belts, galactic cosmic rays), micron-size particulates (from meteoroids and space debris), as well as all types of phenomena induced effects on technologies and biological systems, are fully covered in regard to the near-Earth space environment.
+            
+        </p>
+    </div>
+    
+
+    <div class="products">
+        <h3>Current products</h3>
+    <a href="{% url 'anemos' %}">R.102 A.Ne.Mo.S service</a> <br>
+    <!-- <a href="{% url 'comesep' %}">COMESEP</a> <br> -->
+
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,191 @@
+/* change css styles here*/
+
+body {
+    background-color: #e4e6e9; /* Set your desired background color */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    /*padding-left: 50px;
+    padding-right: 50px; */
+    }
+     
+a {
+    font-size: 20px;
+    color: #2679b5;
+    padding-left: 20 px;
+    padding-right: 20 px;
+    padding-bottom: 8 px;
+    text-decoration: none; /* Remove underline by default */
+    }
+a:hover {
+        color: #094978; /* Font color when hovering */
+    }
+
+
+.cactus-table {
+    padding-bottom: 20px;
+}
+.cactus-table td {
+    border: 1px solid black;
+    padding: 20 20px;
+}
+
+
+.cactus-table th {
+    padding: 20 20px;
+}
+
+.flare-table th{
+    padding: 20 20px;
+}
+
+.flare-table td{
+    border: 1px solid black;
+    padding: 20 20px;
+}
+
+
+.bulletin-table {
+    border-collapse: collapse;
+    width: 70%
+}
+.bulletin-table th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+.header-card {
+    background-color: #003247;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    padding-bottom: 4px;
+    margin: 0px;
+    text-align: center;
+    width: 100%; 
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+
+
+  /* CSS for the header inside the card */
+
+  .header-card h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .header-card a {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .inner-div {
+    /*border: 1px solid #ccc; */
+    padding: 0px;
+    margin-top: 10px;
+    flex: 1; /* Each inner div takes up equal space initially */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+    width: 50px;
+}
+
+  .inner-div h1{
+    /*border: 1px solid #ccc; */
+    padding: 0px;
+    margin-top: 10px;
+    font-size:14px;
+    /*box-sizing: border-box; */ /* Ensure padding and border are included in width calculation */
+  }
+
+  .inner-div.middle {
+    flex: 2; /* Make the middle div twice as big as the others */
+
+  }
+
+  .container {
+    display: flex;
+}
+
+/* CSS for the navigation bar */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 12px;
+    width: 220px; /* Adjust width as needed */
+}
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: #094978;
+}
+.navbar li {
+    
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e4e6e9; /* Add border bottom to each list item */
+    
+}
+.navbar a {
+    font-size: 14px;
+    color: #393939;
+    text-decoration: none;
+}
+/* CSS for the content area */
+.navbar a:hover {
+    color: #094978; /* Font color when hovering */
+    background-color: white;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content {
+    background-color: white;
+    flex: 1; /* Take up remaining space */
+    padding-left: 10px; /* Add padding to create space for the navbar */
+    padding-top: 0px; /* Add padding to create space for the navbar */
+    margin-top: 0px; /* Adjust to account for the header card height */
+}
+
+
+.parent {
+        display: flex;
+        width: 95%;
+        padding: 6px;
+        padding-bottom: 50px;
+  }
+
+.objectives {
+    flex: 1.5;
+    padding-left:20px;    
+    padding-right:20px;
+    border: 1px solid grey;
+    vertical-align: middle;
+  }
+  .products {
+    flex: 1;
+    padding-left:20px; 
+    padding-right:50px; 
+    padding-bottom: 50px;
+    vertical-align: middle;
+  }
+
+
+  .spectrogram-table {
+    padding-bottom: 50px;
+
+  }

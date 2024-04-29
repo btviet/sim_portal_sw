@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head>
+    <title>Magnetogram</title>
+</head>
+<body>
+    <div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'sesc' %}">Back to ESC Solar Weather</a></div>
+    
+<div style="padding-bottom: 30px; padding-left: 10px;">
+    <h1 style="padding-bottom: 10px;">Synoptic ecliptic plane field plot </h1>
+    <span style="padding-bottom: 30px;">Image published: </span>
+    {{ instance.issue_time }} <br>
+    <!-- Display the image using the 'url' attribute of the ImageField -->
+    <img src="{{ instance.image.url }}" alt="Image">
+    <br>
+    <span style="padding: 10px;">Red dots: negative polarity. Green dots: positive polarity. Blue circles represent the heliospheric current sheet separating different polarities.
+    </span>
+</div>
+</body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'sesc' %}">Back to ESC Solar Weather</a></div>
+<h1>S.111 SIDC/CACTus Automated CME Detection</h1>
+
+
+<head>
+    <title>Cactus</title>
+</head>
+
+
+<table class="cactus-table">
+    <thead style="border: 1px solid black;">
+    <tr style="font-size: 20px; color:#2679b5; border: 1px solid black;">
+        <th style="border: 1px solid black;">Issue time</th>
+        <th colspan="5" style="border: 1px solid black;">Alert text</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th style="border: 1px solid black;">Time at 21.5 Rs</th>
+        <th style="border: 1px solid black;">Longitude (deg)</th>
+        <th style="border: 1px solid black;">Latitude (deg)</th>
+        <th style="border: 1px solid black;">Half Angle (deg)</th>
+        <th style="border: 1px solid black;">Speed (km/s)</th>
+    </tr>
+    </thead>
+    {% for cme in cme_list %}
+    <tr>
+        <td>{{ cme.issue_time }}</td>
+        <td>{{ cme.initial_time }}</td>
+        <td>{{ cme.longitude }}</td>
+        <td>{{ cme.latitude }}</td>
+        <td>{{ cme.half_angle }}</td>
+        <td>{{ cme.speed }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock content %}

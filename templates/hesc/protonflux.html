@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'hesc' %}">Back to ESC Heliospheric Weather</a></div>
+<h1> NRT energetic particles at Earth</h1>
+<img src="{{ image_url }}" alt="Matplotlib Plot">
+{% endblock content %}

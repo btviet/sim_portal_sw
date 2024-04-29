@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'hesc' %}">Back to ESC Heliospheric Weather</a></div>
+<h3> Solar wind</h3>
+<img src="{{ image_url }}" alt="Matplotlib Plot">
+<div>
+    <p>Current solar wind speed: {{ sw_speed }} km/s</p>
+    <p>Current solar wind density: {{ sw_density}} particles/cm^3</p>
+</div>
+{% endblock content %}

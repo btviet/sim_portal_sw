@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'sesc' %}">Back to ESC Solar Weather</a></div>
+<h1>SIDC Solar Map</h1>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.101c SIDC Solar map</title>
+</head>
+<body>
+    <div style="padding-left: 40px; padding-bottom: 10px;">
+    <p> This image was fetched at the following time: </p> 
+    {{image_date}} <br>
+</div>
+<div>
+   {{ content|safe }} 
+</div>
+</body>
+
+{% endblock content %}

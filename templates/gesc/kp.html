@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'gesc' %}">Back to ESC Geomagnetic Conditions </a></div>
+<h1 style ="padding: 10px;"> Kp </h1>
+<img src="{{ image_url }}" alt="Matplotlib Plot">
+{% endblock content %}

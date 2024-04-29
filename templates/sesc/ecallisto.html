@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'sesc' %}">Back to ESC Solar Weather</a></div>
+<h1>Automated Solar Radio Burst detections</h1>
+
+
+<table class="spectrogram-table">
+    <thead>
+    <tr style="font-size: 20px; color: #2679b5; border: 1px solid black !important;">
+        <th>Issue time</th>
+        <th>Alert text</th>
+    </tr>
+    </thead>
+    {% for spectrogram in spectrogram_list %}
+    <tr>
+        <td>{{ spectrogram.issue_time }}</td>
+        <td>{{ spectrogram.alert_text }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<!-- <img src="{% static 'ecallisto_1.png' %}" alt="My image">
+<img src="{% static 'ecallisto_2.png' %}" alt="My image"> -->
+{% endblock content %}

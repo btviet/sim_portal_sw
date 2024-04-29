@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="padding-left:6px;">Geomagnetic Conditions Expert Service Centre (G-ESC)</h1>
+<div class="parent">
+    <div class="objectives"><h3>Mission statement</h3>
+    <p>The mission of the Geomagnetic Conditions ESC (G-ESC) is to provide and develop the functionalities, capabilities and expertise in the domain of geomagnetism that are needed within the ESA SWE Network to achieve as a collaborative enterprise its mission of demonstrating and assessing the influences of Space Weather and informing and supporting end-users through the provision of accurate, reliable and timely products and (pre) operational services, tailored to their requirements. The G-ESC thus provides, implements and supports the geomagnetic products and capabilities of the ESA SWE network for monitoring, interpreting, and forecasting variations of the geomagnetic field on various timescales, relying on in situ ground-based, as well as space-borne measurements and related derived quantities and models.
+
+    </p></div>
+
+<div class="products">
+<h3>Current products</h3>
+<!-- <a href="{% url 'symh' %}">SYM-H</a> <br> -->
+<a href="{% url 'kp' %}">Kp</a> <br>
+<a href="{% url 'pcn' %}">PCN</a> <br>
+<!-- <a href="{% url 'ae' %}">AE</a> <br> -->
+</div>
+</div>
+{% endblock content %}

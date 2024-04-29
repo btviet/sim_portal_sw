@@ -1,0 +1,43 @@
+
+{% load static %}
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<header>
+
+<div class="header-card">
+    <div class="inner-div">    <h1>THE EUROPEAN SPACE AGENCY</h1></div>
+    <div class="inner-div.middle">
+        <h1>Welcome to the Simulated ESA SWE Portal</h1>
+        <!-- <a href="{% url 'home' %}">Home</a>|
+        <a href="{% url 'sesc' %}">S-ESC</a>&nbsp;
+        <a href="{% url 'hesc' %}">H-ESC</a>&nbsp;
+        <a href="{% url 'resc' %}">R-ESC</a>&nbsp;
+        <a href="{% url 'iesc' %}">I-ESC</a>&nbsp;
+        <a href="{% url 'gesc' %}">G-ESC</a>&nbsp; -->
+        <span style="margin-left: 70px;">All data displayed on this portal does not reflect real-time space weather conditions. Do not distribute outside of the exercise. </span>
+  </div>
+<div class="inner-div"> <span style="margin-left: 0px;">Current simulation time: <br>{{ time }} </span> <br></div>
+</header>
+<div class="container">
+<body>
+    <div class="navbar clearfix">
+        <ul>
+        
+        <li><a href="{% url 'home' %}">Home</a></li> </ul>
+        <div>
+            <span style="font-size: 16px;"> <strong>EXPERT SERVICE CENTRES</strong></span>
+        </div>
+    <ul>
+        <li><a href="{% url 'sesc' %}">ESC Solar Weather</a></li>
+        <li><a href="{% url 'hesc' %}">ESC Heliospheric Weather </a></li>
+        <li><a href="{% url 'resc' %}">ESC Space Radiation</a></li>
+        <li><a href="{% url 'iesc' %}">ESC Ionospheric Weather</a></li>
+        <li><a href="{% url 'gesc' %}">ESC Geomagnetic Conditions</a></li>
+
+    </ul>
+</div>
+</body>
+
+<div class="content">{% block content %} {% endblock content %}</div>
+</div>

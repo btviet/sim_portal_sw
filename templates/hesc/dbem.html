@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'hesc' %}">Back to ESC Heliospheric Weather</a></div>
+<div style="padding: 20px;">
+<h1>Drag-Based (Ensemble) Model</h1>
+<h3>(probabilistic) model for heliospheric propagation of CMEs</h3>
+
+
+
+{% if time|is_later_than:eventstart %}
+    <img src="{% static 'dbm_cme.gif' %}" alt="My image"> 
+    <!-- static is in pages app -->
+    <img style="padding-top: 20px; padding-left: 50px;" src="{% static 'dbm_cme_cinematics.png' %}" alt="My image">
+    {% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="padding:6px;">Solar Weather Expert Service Centre (S-ESC)</h1>
+<div class="parent">
+    <div class="objectives"><h3>Mission statement</h3><p>The mission of the Solar Weather ESC (S-ESC) is to provide and develop the functionalities, capabilities and expertise in the domain of Solar Weather that are needed within the ESA SWE Network to achieve as a collaborative enterprise its mission of demonstrating and assessing the influences of Space Weather and informing and supporting end-users through the provision of accurate, reliable and timely products and (pre-)operational services, tailored to their requirements. The Solar Weather Expert Service Centre (S-ESC) thus provides, implements and supports the Solar Weather products and capabilities of the ESA SWE network. This includes the observation, monitoring, interpretation, modelling and forecasting of Solar Weather conditions with an emphasis on solar (sub-)surface and solar coronal features, events and processes that drive Space Weather in our solar system.
+
+    </p>
+    </div>
+
+    <div class="products">
+    <h3>Current products</h3>
+    <a href="{% url 'solarmap' %}">S.101c SIDC - Solar Map</a><br>
+    <a href="{% url 'ecallisto' %}">Automated Solar Radio Burst detections</a> <br>
+    <a href="{% url 'cactus' %}">S.111 SIDC - CACTus Automated CME detection</a> <br>
+    <a href="{% url 'flarealert' %}">S.112 SIDC - Solar Flare GOES alert</a> <br>
+    <a href="{% url 'synoptic' %}">Synoptic ecliptic plane field plot of the Sun</a> <br>
+    </div>
+</div>
+{% endblock content %}

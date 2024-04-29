@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'resc' %}">Back to ESC Space Radiation</a></div>
+<h1 style="padding: 20px;"> A.Ne.Mo.S service</h1>
+<div style="padding: 20px;">
+<p style="padding-bottom: 20px;">Latest issue time: {{ gle_time }} </p>
+<p style="font-size: 18px; padding-top: 20px;">Current status: {{ gle_text }}</p>
+</div>
+{% endblock content %}

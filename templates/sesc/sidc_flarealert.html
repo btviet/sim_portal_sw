@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="padding: 10px;"><a style="font-size: 14px;" href="{% url 'sesc' %}">Back to ESC Solar Weather</a></div>
+<head>
+    <title>Flare alert</title>
+</head>
+<h1>SIDC Latest Solar GOES-flare alert</h1>
+<div>The SIDC data processing pipeline analyses incoming GOES X-ray data in near-real-time and reports on the occurrence of X-ray flares of Classes M5 and up.</div>
+<div style="padding: 20px;">
+<table class="flare-table">
+    <thead>
+    <tr style="font-size: 20px; color: #2679b5; border: 1px solid black !important;">
+        <th>Issue time</th>
+        <th>Alert text</th>
+    </tr>
+    </thead>
+    {% for flare in flare_list %}
+    <tr>
+        <td>{{ flare.issue_time }}</td>
+        <td>{{ flare.alert_text }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock content %}

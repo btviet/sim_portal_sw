@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+    
+    <h1>SIDC Daily space weather bulletin: make it yoursel</h1>
+    <span>Nominal issue time of daily bulletins is 12:30 UT.The bulletin includes a summary of the observed activity over the past 24h, as well as an outlook on the activity for the next days. </span>
+<head>
+    <title>SW Bulletin</title>
+</head>
+
+
+<body>
+<br>
+<table class="bulletin-table">
+    {% for bulletin in bulletin_list %} 
+    <tr style="padding-top: 20px;">
+        <th>Issuedate</th>
+    </tr>
+    <tr><td>{{ bulletin.issue_time }}</td></tr>
+    <tr>
+        <th>Solar Weather</th>
+    </tr>
+    <tr><td>{{ bulletin.solar_weather }}</td></tr>
+    <tr>
+        <th>Geospace and geomagnetism</th>
+    </tr>
+    <tr><td>{{ bulletin.geo}}</td></tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock content %}
